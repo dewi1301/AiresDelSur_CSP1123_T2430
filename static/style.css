@@ -1,0 +1,144 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    top: 0px;        /* Stick to the top */
+    width: 100%;  /* Full width */
+    z-index: 10;  /* Ensure it stays on top of other content */
+}
+
+.fixed-header {
+    position: fixed; /* Fix the header */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it stays on top of other content */
+    background-color: #000; /* Background color to match your design */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Padding for the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul { 
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.logo img {
+    height: 10px;
+    flex: 1;
+    max-width: 30%; /* Restrict size */
+    float: left; /* Keep main logo on the left */
+    margin-left: 20px;
+}
+
+.highlight {
+    color: #00D9F7;
+    font-weight: bold;
+}
+
+.search-bar {
+    flex: 1;
+    gap: 5px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.search-bar input {
+    padding: 5px;
+}
+
+.search-bar button {
+    margin-right: 5px; /* Add controlled spacing beside button */
+    gap: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 210px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 30px;
+    clear: both; /* Ensure footer clears any floated elements */
+    position: relative; /* Position relative for absolute positioning of the logo */
+    top: 160px; /* Adjust this value to pull the logo up into the footer */
+
+}
+
+.footer-container {
+    display: grid;/* Use grid layout for precise alignment */ 
+    grid-template-columns: repeat(5, 1fr); /* Equal-width columns */
+    gap: 20px;
+    text-align: left;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#unique-heading {
+    font-style: italic;
+}
+
+footer ul {
+    list-style: none; 
+    padding: 0;
+    text-align: center; 
+}
+
+footer ul li {
+    margin: 5px 0px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.logo-section {
+    text-align: center; /* Center the logo */
+    margin-top: -20px;
+}
