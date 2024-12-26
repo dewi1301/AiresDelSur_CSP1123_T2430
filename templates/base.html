@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://www.airesdelsur.com/">
+    <meta name="copyright" content="© 2024 Aires Del Sur. All Rights Reserved.">
+    <meta name="description" content="Imaginary airplane, Aires Del Sur website of flight booking systems done in fulfilment of course requirements CSP1123 Mini IT Project at ©️ Universiti Telekom - Multimedia University (MMU), Cyberjaya, Malaysia.">
+    <link rel="icon" href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:5%;height:auto;">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about_us_style.css') }}">
+    {% block title %}
+
+    {% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="{% if is_fixed_header %}fixed-header{% endif %}">
+            <img src="{{ url_for('static', filename='logo1.png') }}" style="max-width:10%;height:auto;" alt="Aires Del Sur Logo">
+        <nav>
+            <img src="{{ url_for('static', filename='logo2.png') }}" style="max-width:26%;height:auto;" alt="Aires Del Sur Text Logo">
+            <ul>
+                <li><a href="#">Book</a></li>
+                <li><a href="#">Manage</a></li>
+                <li><a href="#">Check In</a></li>
+                <li><a href="#">Travel Package</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Mileage</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#" class="highlight">Sign Up</a></li>
+                <li><a href="#" class="highlight">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for a topic">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="min-height: {{ main_content_height }}; padding-top: 130px;">
+        {% block content %}
+        <!-- Body content will go here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4 id="unique-heading">Plan Your Vacation</h4>
+                <ul>
+                    <li><a href="#">Search for Your Dream Flights</a></li>
+                    <li><a href="#">Manage Your Booking</a></li>
+                    <li><a href="#">Tours & Activity</a></li>
+                    <li><a href="#">Promotion Deals & Packages</a></li>
+                    <li><a href="#">Student Privileges</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 id="unique-heading">Mileages Information</h4>
+                <ul>
+                    <li><a href="#">Earn Bonus Miles</a></li>
+                    <li><a href="#">Earn When Fly</a></li>
+                    <li><a href="#">Earn On The Ground</a></li>
+                    <li><a href="#">Claim Missing Miles</a></li>
+                    <li><a href="#">Donate Miles</a></li>
+                    <li><a href="#">Redeem Miles</a></li>
+                    <li><a href="#">Mix Miles & Cash</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 id="unique-heading">About Us</h4>
+                <ul>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Where We Fly</a></li>
+                    <li><a href="#">What We Are Doing</a></li>
+                    <li><a href="{{ url_for('partner_airlines_page') }}">Discover Our Partner Airlines</a><li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Join Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 id="unique-heading">Payment</h4>
+                <ul>
+                    <li><a href="#">Acceptable Payment Method</a></li>
+                    <li><a href="#">Sales & Service Tax</a></li>
+                    <li><a href="#">Cancellation & Refunds</a></li>
+                    <li><a href="#">Get Upgrade</a></li>
+                </ul>
+            </div>
+            <center>       
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <img src="{{ url_for('static', filename='logo4.png') }}" type="image/png" style="max-width:45%;height:auto;" alt="Aires Del Sur Logo">   
+                    <p id="unique-heading">Connect With Us</p>
+                    <a href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:15%;height:auto;"></a>
+                    <a href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:15%;height:auto;"></a>
+                </div>
+            </center>
+        </div>
+        <br>
+        <div class="footer-bottom">
+            <a href="#">Help</a>&emsp;
+            <a href="#">Modern Slavery Act Transparency Statement</a>&emsp;
+            <a href="#">Privacy Policy</a>&emsp;
+            <a href="#">Contact Us</a>&emsp;
+            <a href="#">FAQ</a>
+        <br><br>
+            <a href="#">Sitemap</a></li>&emsp;
+            <a href="#">Accessibility Statement</a>&emsp;
+            <a href="#">Cybersecurity</a>&emsp;
+            <a href="#">Cookie Policy</a>&emsp;
+            <a href="#">Terms & Conditions</a>
+            <p>© 2024 Aires Del Sur. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384 - DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
