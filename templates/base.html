@@ -9,6 +9,7 @@
     <link rel="icon" href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:5%;height:auto;">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='about_us_style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     {% block title %}
 
     {% endblock %}
@@ -90,17 +91,41 @@
                     <li><a href="#">Cancellation & Refunds</a></li>
                     <li><a href="#">Get Upgrade</a></li>
                 </ul>
-            </div>
-            <center>       
+            </div>      
             <!-- Logo Section -->
+            <div class="footer-column">
             <div class="logo-section">
-                <img src="{{ url_for('static', filename='logo4.png') }}" type="image/png" style="max-width:45%;height:auto;" alt="Aires Del Sur Logo">   
-                    <p id="unique-heading">Connect With Us</p>
-                    <a href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:15%;height:auto;"></a>
-                    <a href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:15%;height:auto;"></a>
-                </div>
+            <center>
+            <img src="{{ url_for('static', filename='logo4.png') }}" type="image/png" style="max-width:45%;height:auto;" alt="Aires Del Sur Logo">   
+                <p id="unique-heading">Connect With Us</p>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>&ensp;
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>&ensp;
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>&ensp;
+                <a href="https://www.threads.com" target="_blank">
+                    <i class="fab fa-threads"></i>
+                </a>&ensp;
+                <a href="https://www.tiktok.com" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>&ensp;
+                <a href="https://www.snapchat.com" target="_blank">
+                    <i class="fab fa-snapchat"></i><br><br>
+                </a>&ensp;
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>&ensp;
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </center>
-        </div>
+            </div> 
+            </div>   
+        </div>     
         <br>
         <div class="footer-bottom">
             <a href="#">Help</a>&emsp;
@@ -108,12 +133,15 @@
             <a href="#">Privacy Policy</a>&emsp;
             <a href="#">Contact Us</a>&emsp;
             <a href="#">FAQ</a>
-        <br><br>
+        </div>
+        <div class="footer-bottom">
             <a href="#">Sitemap</a></li>&emsp;
             <a href="#">Accessibility Statement</a>&emsp;
             <a href="#">Cybersecurity</a>&emsp;
             <a href="#">Cookie Policy</a>&emsp;
             <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="footer-bottom">
             <p>© 2024 Aires Del Sur. All rights reserved.</p>
         </div>
     </footer>
