@@ -3,16 +3,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="https://www.airesdelsur.com/">
     <meta name="copyright" content="© 2024 Aires Del Sur. All Rights Reserved.">
     <meta name="description" content="Imaginary airplane, Aires Del Sur website of flight booking systems done in fulfilment of course requirements CSP1123 Mini IT Project at ©️ Universiti Telekom - Multimedia University (MMU), Cyberjaya, Malaysia.">
     <link rel="icon" href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:5%;height:auto;">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='about_us_style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>
     {% block title %}
 
     {% endblock %}
+    </title>
 </head>
 <body>
     <!-- Header -->
@@ -41,7 +42,7 @@
     </header>
 
     <!-- Main Content -->
-    <main style="min-height: {{ main_content_height }}; padding-top: 130px;">
+    <main style="min-height: {{ main_content_height }}; padding-top: 120px;">
         {% block content %}
         <!-- Body content will go here -->
         {% endblock %}
