@@ -1,0 +1,15 @@
+@keyframes fly {
+    0% {
+        transform: translateX(-50vw) translateY(10vh) rotate(0deg);
+    }
+    50% {
+        transform: translateX(0vw) translateY(-10vh) rotate(20deg);
+    }
+    100% {
+        transform: translateX(50vw) translateY(10vh) rotate(0deg);
+    }
+}
+
+.loading-container {
+    overflow: hidden;
+}
