@@ -8,6 +8,8 @@
     <link rel="icon" href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:5%;height:auto;">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='about_us_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loading_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loading_style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>
     {% block title %}
@@ -42,7 +44,7 @@
     </header>
 
     <!-- Main Content -->
-    <main style="min-height: {{ main_content_height }}; padding-top: 120px;">
+    <main style="min-height: {{ main_content_height }}; {{ padding_top }};">
         {% block content %}
         <!-- Body content will go here -->
         {% endblock %}
