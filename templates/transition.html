@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="loading-container" style="display: flex; justify-content: center; align-items: center; height: 80vh; background-color: #f4f4f4;">
+    <div class="airplane-animation">
+        <div class="airplane" style="width: 100px; height: 100px; position: relative; animation: fly 2s infinite linear;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" style="width: 100%; height: 100%;">
+                <path fill="#0d6efd" d="M32 2l10 10H42L52 22h2L62 32l-8 2-6 4-2 8-8-2-4-6-2 6-2-12-4-4-10-2 8-6 2-6-2-2-4-8 8 8 6-2L32 2z"/>
+                <path fill="#6c757d" d="M32 62l-4-6-6 2-6-10-8 2-2-6 8-4 2-8 4-6 4-8-8 2 8 4-2 6-6 2-8-2-2 2 4 4-4 2 2 4-4 6-2 4 2 4 6-2 4 8-8-8-6 2 10 10 6 6L32 62z"/>
+                <circle cx="32" cy="32" r="6" fill="#6c757d" />
+            </svg>
+        </div>
+        <p style="text-align: center; margin-top: 20px; font-size: 1.2rem; color: #6c757d;">Loading, please wait...</p>
+    </div>
+</div>
+{% endblock %}
