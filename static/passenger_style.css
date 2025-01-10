@@ -1,0 +1,608 @@
+/* General Styling */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #f5f5f5;
+}
+
+h3 {
+    color: black;
+}
+
+/* Navigation links */
+.navbar {
+    display: flex; /* Use Flexbox for the navbar */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 15; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 80px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #deba4a;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #575dfb;
+    color: white;
+    padding: 10px 15px;
+    border: 4px solid white; /* Add a white stroke */;
+    margin-right: 50px; /* Add spacing from the edge */
+    margin-top: -120px;
+    align-self: center; /* Ensure it's centered vertically */
+    float: right;
+}
+
+.openbtn:hover {
+  background-color: #6c5100;
+}
+
+
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Header */
+
+header {
+    background-color: #000;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    top: 0px;
+    height: 127px;
+    /* Stick to the top */
+    width: 100%;
+    /* Full width */
+    z-index: 10;
+    /* Ensure it stays on top of other content */
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    /* Stick to the top */
+    width: 100%;
+    /* Full width */
+    z-index: 10;
+    /* Ensure it stays on top of other content */
+    background-color: #000;
+    /* Background color to match your design */
+    color: #fff;
+    /* Text color */
+    padding: 0px 0;
+    /* Padding for the header */
+    
+}
+
+.header-container {
+    display: flex;
+    /* Use grid layout for precise alignment */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+    height: 100%;
+    padding: 0 10px; /* Add padding for spacing */
+    text-align: center;
+    gap: 0px;
+}
+
+.header-column {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: center;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center horizontally */
+}
+
+.header-logo {
+    max-width: 10%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -20px; /* Pull the logo upwards */
+}
+
+.header-menu {
+    display: flex; /* Use Flexbox for links */
+    justify-content: center; /* Center links */
+    gap: 0px; /* Space between links */
+    text-align: center;
+    align-content: center;
+}
+
+nav ul {
+    display: flex;
+    padding-top: 10px;
+    margin-left: 390px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+    flex: 1;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.highlight {
+    color: #00D9F7;
+    font-weight: bold;
+}
+
+.logo-section {
+    position: absolute;
+    text-align: center;
+    /* Center the logo */
+    top: 0px;
+    left: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* Main Content */
+
+main {
+    background-color: #f5f5f5;
+    padding: 0px;
+    margin-top: 15px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 0px 0px;
+    clear: both;
+    /* Ensure footer clears any floated elements */
+    position: flex;
+    /* Position relative for absolute positioning of the logo */
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    /* Use grid layout for precise alignment */
+    grid-template-columns: repeat(5, 2fr);
+    /* Equal-width columns */
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+footer ul li {
+    margin: 5px 0px;
+}
+
+.footer-bottom {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 15px;
+    font-size: 14px;
+    /* Allows content to wrap if it overflows */
+    justify-content: center;
+    /* Center-align content */
+}
+
+.footer-links {
+    display: flex; /* Use Flexbox for links */
+    justify-content: center; /* Center links */
+    gap: 20px; /* Space between links */
+}
+
+.menu{
+background-color: #000000;
+text-align: center;
+display: flex;
+margin: 0px 10px;
+align-items: center;
+justify-content: center; 
+}
+
+.menu-space{
+    height: 20px;
+    width: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li {
+    display: flex;
+}
+
+li ul {
+    display: none;
+}
+
+ul li a {
+    font-family: perpetua;
+    font-size: 18px;
+    font-weight: normal;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+    width: 170px;
+    height: 20px;
+    padding: 20px;
+    border: 3px solid white;
+    margin: 0px;
+    background-color: #575dfb;
+    display: flex;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: white;
+    background-color: #c9dbff;
+}
+
+li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+li:hover li {
+    float: none;
+}
+
+li:hover a {
+    color: white;
+    background-color: #00ffff;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode #sidebar {
+    background-color: #ffffff; /* Darker background for sidebar */
+    color: white;
+}
+
+.dark-mode #mySidebar a {
+    color: white; /* Ensure links are also white */
+    hover color: #deba4a;
+}
+
+.dark-mode #mySidebar a:hover {
+    color: #deba4a; /* Change color on hover */
+}
+
+.dark-mode .toggle-label {
+    color: white; /* Change the text color to white */
+}
+
+.dark-mode h3 {
+    color: white; /* Change the h3 text color to white in dark mode */
+}
+
+.dark-mode main {
+    background-color: #d9d9d9; /* Darker background for main content */
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  padding-left: 30px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #575dfb;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #575dfb;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.container.mt-5 {
+    margin-top: 3rem !important;
+    /* Adjust as needed */
+}
+
+.container.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.container.mt-4 {
+    margin-top: 2rem !important;
+    /* Adjust as needed */
+}
+
+.card.shadow-lg {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.card-header.text-center {
+    text-align: center !important;
+}
+
+.btn.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn.btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+}
+
+
+/* Flexbox Utilities */
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+
+/* Form Styles */
+
+.form-label {
+    /* Styles for form labels */
+}
+
+.form-select {
+    display: inline-block;
+    width: auto;
+}
+
+
+/* Alert Styles */
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert.alert-warning.text-center {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    text-align: center !important;
+}
+
+.card.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.partner-banner.text-center.py-4 {
+    text-align: center !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+/* Alert Styles */
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    z-index: 9;
+}
+
+.alert-heading {
+    color: inherit;
+}
+
+.alert-link {
+    font-weight: 700;
+}
+
+.alert-dismissible {
+    padding-right: 4rem;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: .75rem 1.25rem;
+    color: inherit;
+}
+
+.alert-primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+.alert-secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-light {
+    color: #818182;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+}
+
+.alert-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
