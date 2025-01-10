@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="© 2024 Aires Del Sur. All Rights Reserved.">
+    <meta name="description" content="Imaginary airplane, Aires Del Sur Admin website of flight booking systems done in fulfilment of course requirements CSP1123 Mini IT Project at ©️ Universiti Telekom - Multimedia University (MMU), Cyberjaya, Malaysia.">
+    <link rel="icon" href="{{ url_for('static', filename='logo3.png') }}" type="image/png" style="max-width:5%;height:auto;">
+    <link rel="stylesheet" href="{{ url_for('static', filename='passenger_style.css') }}">
+    <title>
+    {% block title %}
+
+    {% endblock %}
+    </title>
+</head>
+<body>
+    <!-- Header -->
+        <header>
+                <div class="logo-section">
+                    <img src="{{ url_for('static', filename='logo4.png') }}" type="image/png" class="header-logo" style="max-width:36%;height:auto;" alt="Aires Del Sur Logo">
+                </div>
+                <nav>
+                    <center>
+                    <img src="{{ url_for('static', filename='passenger-text.png') }}" style="max-width: 36%;height:auto; padding-top: 20px; padding-bottom: 20px;" alt="Aires Del Sur Text Logo">
+                    </center>
+                    <div class="header-menu">
+                        <ul>
+                            <li>
+                                <a href="#"><b>Staff</b></a></li>
+                            <li>
+                                <a href="#"><b>Admin</b></a>
+                        </ul>
+                    </div>
+                    <button class="openbtn" onclick=" openNav()">&#9776;</button>
+                <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <center><a href="#">Settings</a></center>
+                <a href="#">History</a>
+                <a href="#">Change Passwords</a>
+                <a href="#">Logout</a>
+                <center>
+                    <h3>On Dark Theme</h3>
+                <label class="switch">
+                <input type="checkbox" onclick="darkMode()">
+                <span class="slider round"></span>
+                </label>
+                </center>
+                </div>
+            </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main style="min-height: {{ main_content_height }}; {{ padding_top }}">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}
+        <!-- Body content will go here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <h4>© 2024 Aires Del Sur. All rights reserved.</h4>
+            <div class="footer-links">
+            <p>Privacy</p>
+            <p>Terms</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function openNav() {            
+        document.getElementById("mySidebar").style.width = "200px";
+        document.getElementById("main").style.marginRight = "200px";
+        }
+
+        function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginRight = "0";
+        }
+    </script>
+    <script>
+        function darkMode() {
+            var element = document.body
+            var sidebar = document.getElementById("mySidebar");
+            var mainContent = document.querySelector("main");
+            
+            sidebar.classList.toggle("dark-mode");
+            mainContent.classList.toggle("dark-mode");;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384 - DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
