@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}
+Learn More About Us! | Aires del Sur
+{% endblock %}
+
+{% block content %}
+<div class="about-us-container">
+    <!-- Section 1: Introduction -->
+    <section class="intro">
+        <div class="text-content">
+            <h1>Travel & Life: The Airplane Story</h1>
+            <p>
+                <em>"Aires del Sur is more than an airline; it is a gateway to the skies, where travel meets life, and every journey becomes a story worth telling. Inspired by the breezes of the South, we set out to create a travel experience that embodies luxury, elegance, and the boundless spirit of exploration."</em>
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='images/intro.jpg') }}" alt="Luxury Cabin">
+        </div>
+    </section>
+
+    <!-- Section 2: The Birth of Aires del Sur -->
+    <section class="birth">
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='images/birth.jpg') }}" alt="Airplane in the Sky">
+        </div>
+        <div class="text-content">
+            <h2>The Birth of Aires del Sur</h2>
+            <p>
+                Born from a dream to bring the warmth and vibrance of the South to the global skies, Aires del Sur was founded with a singular vision: to craft a seamless blend of comfort, sophistication, and adventure. Our name, translating to <strong>'Airs of the South'</strong>, symbolizes our dedication to carrying the essence of the South into every destination we touch.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Mission -->
+    <section class="mission">
+        <div class="text-content">
+            <h2>Our Mission: Where Travel Meets Life</h2>
+            <p>
+                At <strong>Aires del Sur</strong>, we believe travel is more than reaching a destination—it's about embracing new cultures, creating unforgettable moments, and enjoying the journey as much as the arrival. With world-class service, state-of-the-art aircraft, and personalized care, we invite you to experience travel like never before.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='images/mission.jpg') }}" alt="Passengers Relaxing">
+        </div>
+    </section>
+
+    <!-- Section 4: The Aires del Sur Difference -->
+    <section class="difference">
+        <h2>The Aires del Sur Difference</h2>
+        <div class="features">
+            <div class="feature-item">
+                <img src="{{ url_for('static', filename='images/luxury.jpg') }}" alt="Luxury Dining">
+                <h3>Unparalleled Luxury</h3>
+                <p>From gourmet dining to spacious cabins, every detail is designed with your comfort in mind.</p>
+            </div>
+            <div class="feature-item">
+                <img src="{{ url_for('static', filename='images/technology.jpg') }}" alt="Technology">
+                <h3>Cutting-Edge Technology</h3>
+                <p>Seamless booking, enhanced safety, and innovative in-flight entertainment await you.</p>
+            </div>
+            <div class="feature-item">
+                <img src="{{ url_for('static', filename='images/sustainability.jpg') }}" alt="Eco-Friendly">
+                <h3>Sustainability at Heart</h3>
+                <p>We are committed to reducing our environmental footprint with eco-friendly practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Our Legacy -->
+    <section class="legacy">
+        <div class="text-content">
+            <h2>Our Legacy in the Making</h2>
+            <p>
+                As we take to the skies, we carry with us a promise to redefine the art of flying. <strong>Aires del Sur</strong> is not just an airline; it’s a movement—a celebration of life, travel, and the stories that connect us all.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='images/legacy.jpg') }}" alt="Airplane Legacy">
+        </div>
+    </section>
+
+    <!-- Section 6: Call to Action -->
+    <section class="cta">
+        <section class="highlight">
+        <h21>Join Us in Redefining Air Travel</h21>
+        </section>
+        <p>
+            Whether you're traveling for adventure, connection, or relaxation, let <strong>Aires del Sur</strong> elevate your journey to new heights.
+        </p>
+        <a href="#" class="cta-button">Explore Flights</a>
+    </section>
+</div>
+{% endblock %}
